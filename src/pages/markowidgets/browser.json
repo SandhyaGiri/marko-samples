@@ -1,0 +1,7 @@
+{
+    "dependencies": [
+    	"require: marko-widgets",
+        "require: ../../components/click-count",
+        "require: ../../components/app-hello-mw"
+    ]
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+    <title>Marko demo</title>
+  </head>
+  <body>
+    <h1>Marko demo</h1>
+    <app-hello firstName="${data.firstName}" lastName="${data.lastName}"/>
+
+    <app-reverse firstName="${data.firstName}" lastName="${data.lastName}"/>
+    <ul if(notEmpty(data.colors))>
+    	<li for(color in data.colors | status-var=loop)>
+    		${color} - ${loop.getIndex()+1} of ${loop.getLength()}
+    	</li>
+    </ul>
+    <div else>
+    	There are no colors.
+    </div>
+  </body>
+</html>

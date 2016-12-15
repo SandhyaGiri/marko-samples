@@ -1,0 +1,27 @@
+<lasso-page name="markowidgets" package-path="./browser.json" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+    <title>Marko Widgets demo</title>
+     <lasso-head/>
+  </head>
+  <body>
+    <h1>Marko Widgets demo</h1>
+    <app-hello-mw firstName="${data.firstName}" lastName="${data.lastName}"/>
+
+    <click-count />
+
+    <app-reverse firstName="${data.firstName}" lastName="${data.lastName}"/>
+    <ul if(notEmpty(data.colors))>
+    	<li for(color in data.colors | status-var=loop)>
+    		${color} - ${loop.getIndex()+1} of ${loop.getLength()}
+    	</li>
+    </ul>
+    <div else>
+    	There are no colors.
+    </div>
+     <lasso-body/>
+     <init-widgets/>
+  </body>
+</html>
